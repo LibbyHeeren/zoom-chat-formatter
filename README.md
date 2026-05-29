@@ -1,4 +1,16 @@
 # zoom-chat-formatter
-Some Python functions I use to re-format Zoom chat files for enhanced readability. Input is a zoom chat .txt, output is also a .txt. It would be even better to turn them into markdown! This code is 500% a ChatGPT collaboration, so feel free to let me know if anything looks weird. 
+These are some Python functions I use to re-format Zoom chat files for enhanced readability.  
 
-Other thoughts: I have to update or change this function all the time because zoom chat files don't have a standardized format. Changing zoom settings can change the chat files. I have it set up for my "usual" chat file format. It would be nice to write a detection function to see what the format is and then apply the right formatting function to the file. It would also be nice to have a test that will look to see if the file ended up blank (which has sometimes happened to me in testing), and throw an error if so, telling the user it might be a different format of input file than the function was written to fix.  
+PLEASE NOTE THAT THIS WORKS ON OFFICIAL CHAT FILES THAT ZOOM GIVES YOU AS THE HOST OF THE MEETING. The format of zoom chat files that you save as an attendee are, seemingly, different. It's been a frustrating journey realizing that.    
+
+Input is a zoom chat .txt, output is also a .txt. It would be even better to turn them into markdown! This code is 500% a ChatGPT collaboration, so feel free to let me know if anything looks weird. This was created before Claude Code was really on the scene.  
+
+```
+# Example code processes a zoom chat file that lives in the project root
+# process_zoom_chat("input.txt", "whatever you name your output.txt")
+
+process_zoom_chat("RecordingnewChat.txt", "RecordingnewChat_reformatted.txt")
+
+# The above line of code will read your chat file, reformat it, and save it
+# in the root. Feel free to specify different file paths.
+```
